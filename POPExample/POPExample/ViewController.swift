@@ -15,7 +15,9 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+//        let bookCellNib = UINib(nibName: BookTableViewCell.nibName, bundle: nil)
+//        booksTableView.register(bookCellNib, forCellReuseIdentifier: BookTableViewCell.reuseIdentifier)
+        booksTableView.register(BookTableViewCell.self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +33,10 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: "bookCell")
+        let cell = UITableViewCell(style: .default, reuseIdentifier: BookTableViewCell.reuseIdentifier) as! BookTableViewCell
+        
+        cell.titleLabel.text = "abc"
+        cell.authorLabel.text = "abc"
         
         return cell
     }
