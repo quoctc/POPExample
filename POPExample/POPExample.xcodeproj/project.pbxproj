@@ -17,6 +17,11 @@
 		D0724CE81F78E2E700D1AA2B /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724CE71F78E2E700D1AA2B /* Movie.swift */; };
 		D0724CED1F78E72200D1AA2B /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724CEC1F78E72100D1AA2B /* BookTableViewCell.swift */; };
 		D0724CEF1F78E99000D1AA2B /* UIViewConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724CEE1F78E99000D1AA2B /* UIViewConfigs.swift */; };
+		D09FBB991F832A4A008490DE /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D09FBB981F832A4A008490DE /* Auth.storyboard */; };
+		D09FBBA01F832B30008490DE /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09FBB9F1F832B30008490DE /* LoginViewController.swift */; };
+		D09FBBA21F832FC7008490DE /* ForgotPasswordViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09FBBA11F832FC7008490DE /* ForgotPasswordViewController.swift */; };
+		D09FBBA41F832FDC008490DE /* AuthViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09FBBA31F832FDC008490DE /* AuthViewController.swift */; };
+		D09FBBA61F833051008490DE /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D09FBBA51F833051008490DE /* SignUpViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +58,11 @@
 		D0724CE71F78E2E700D1AA2B /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		D0724CEC1F78E72100D1AA2B /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		D0724CEE1F78E99000D1AA2B /* UIViewConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewConfigs.swift; sourceTree = "<group>"; };
+		D09FBB981F832A4A008490DE /* Auth.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Auth.storyboard; sourceTree = "<group>"; };
+		D09FBB9F1F832B30008490DE /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		D09FBBA11F832FC7008490DE /* ForgotPasswordViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ForgotPasswordViewController.swift; sourceTree = "<group>"; };
+		D09FBBA31F832FDC008490DE /* AuthViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthViewController.swift; sourceTree = "<group>"; };
+		D09FBBA51F833051008490DE /* SignUpViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -103,12 +113,13 @@
 		D0724CB81F78E2C200D1AA2B /* POPExample */ = {
 			isa = PBXGroup;
 			children = (
+				D09FBB9E1F832B0A008490DE /* Auth */,
 				D0724CEB1F78E6FC00D1AA2B /* Views */,
 				D0724CEA1F78E5DB00D1AA2B /* Extentions */,
 				D0724CE91F78E2ED00D1AA2B /* Models */,
 				D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */,
 				D0724CBB1F78E2C200D1AA2B /* ViewController.swift */,
-				D0724CBD1F78E2C200D1AA2B /* Main.storyboard */,
+				D09FBBA71F833732008490DE /* Storyboards */,
 				D0724CC01F78E2C200D1AA2B /* Assets.xcassets */,
 				D0724CC21F78E2C200D1AA2B /* LaunchScreen.storyboard */,
 				D0724CC51F78E2C200D1AA2B /* Info.plist */,
@@ -156,6 +167,26 @@
 				D0724CEE1F78E99000D1AA2B /* UIViewConfigs.swift */,
 			);
 			name = Views;
+			sourceTree = "<group>";
+		};
+		D09FBB9E1F832B0A008490DE /* Auth */ = {
+			isa = PBXGroup;
+			children = (
+				D09FBBA31F832FDC008490DE /* AuthViewController.swift */,
+				D09FBB9F1F832B30008490DE /* LoginViewController.swift */,
+				D09FBBA11F832FC7008490DE /* ForgotPasswordViewController.swift */,
+				D09FBBA51F833051008490DE /* SignUpViewController.swift */,
+			);
+			path = Auth;
+			sourceTree = "<group>";
+		};
+		D09FBBA71F833732008490DE /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
+				D0724CBD1F78E2C200D1AA2B /* Main.storyboard */,
+				D09FBB981F832A4A008490DE /* Auth.storyboard */,
+			);
+			name = Storyboards;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -265,6 +296,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09FBB991F832A4A008490DE /* Auth.storyboard in Resources */,
 				D0724CC41F78E2C200D1AA2B /* LaunchScreen.storyboard in Resources */,
 				D0724CC11F78E2C200D1AA2B /* Assets.xcassets in Resources */,
 				D0724CBF1F78E2C200D1AA2B /* Main.storyboard in Resources */,
@@ -292,9 +324,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D09FBBA01F832B30008490DE /* LoginViewController.swift in Sources */,
+				D09FBBA21F832FC7008490DE /* ForgotPasswordViewController.swift in Sources */,
 				D0724CED1F78E72200D1AA2B /* BookTableViewCell.swift in Sources */,
 				D0724CBC1F78E2C200D1AA2B /* ViewController.swift in Sources */,
+				D09FBBA41F832FDC008490DE /* AuthViewController.swift in Sources */,
 				D0724CBA1F78E2C200D1AA2B /* AppDelegate.swift in Sources */,
+				D09FBBA61F833051008490DE /* SignUpViewController.swift in Sources */,
 				D0724CE81F78E2E700D1AA2B /* Movie.swift in Sources */,
 				D0724CEF1F78E99000D1AA2B /* UIViewConfigs.swift in Sources */,
 			);
@@ -543,6 +579,7 @@
 				D0724CE01F78E2C200D1AA2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0724CE11F78E2C200D1AA2B /* Build configuration list for PBXNativeTarget "POPExampleTests" */ = {
 			isa = XCConfigurationList;
@@ -551,6 +588,7 @@
 				D0724CE31F78E2C200D1AA2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D0724CE41F78E2C200D1AA2B /* Build configuration list for PBXNativeTarget "POPExampleUITests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +597,7 @@
 				D0724CE61F78E2C200D1AA2B /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
