@@ -39,7 +39,7 @@ extension NibLoadableView where Self: UIView {
 
 //3.
 extension UITableView {
-    func register<T: UITableViewCell where T: ReuseableView, T: NibLoadableView>(_: T.Type) {
+    func register<T: UITableViewCell>(_: T.Type) where T: ReuseableView, T: NibLoadableView {
         let nib = UINib(nibName: T.nibName, bundle: nil)
         register(nib, forCellReuseIdentifier: T.reuseIdentifier)
     }

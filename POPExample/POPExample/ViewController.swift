@@ -15,8 +15,6 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-//        let bookCellNib = UINib(nibName: BookTableViewCell.nibName, bundle: nil)
-//        booksTableView.register(bookCellNib, forCellReuseIdentifier: BookTableViewCell.reuseIdentifier)
         booksTableView.register(BookTableViewCell.self)
     }
 
