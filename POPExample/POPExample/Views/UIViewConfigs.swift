@@ -40,7 +40,17 @@ extension NibLoadableView where Self: UIView {
 //3.
 extension UITableView {
     func register<T: UITableViewCell>(_: T.Type) where T: ReuseableView, T: NibLoadableView {
-        let nib = UINib(nibName: T.nibName, bundle: nil)
-        register(nib, forCellReuseIdentifier: T.reuseIdentifier)
+        let Nib = UINib(nibName: T.nibName, bundle: nil)
+        register(Nib, forCellReuseIdentifier: T.reuseIdentifier)
+    }
+}
+
+//4
+extension UITableView {
+    func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReuseableView {
+        guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
+            fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
+        }
+        return cell
     }
 }

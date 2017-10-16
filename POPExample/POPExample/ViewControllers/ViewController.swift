@@ -15,7 +15,8 @@ class ViewController: UIViewController, UITableViewDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        booksTableView.register(BookTableViewCell.self)
+        //Just use register for cells that define in XIB files
+        //booksTableView.register(BookTableViewCell.self)
     }
 
     override func didReceiveMemoryWarning() {
@@ -31,7 +32,7 @@ extension ViewController {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = UITableViewCell(style: .default, reuseIdentifier: BookTableViewCell.reuseIdentifier) as! BookTableViewCell
+        let cell = tableView.dequeueReusableCell(forIndexPath: indexPath) as BookTableViewCell
         
         cell.titleLabel.text = "abc"
         cell.authorLabel.text = "abc"

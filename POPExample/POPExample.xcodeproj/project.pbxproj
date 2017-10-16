@@ -163,6 +163,13 @@
 			path = ViewControllers;
 			sourceTree = "<group>";
 		};
+		D01D2F7A1F9470F20000826A /* Nibs */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Nibs;
+			sourceTree = "<group>";
+		};
 		D0724CAD1F78E2C200D1AA2B = {
 			isa = PBXGroup;
 			children = (
@@ -195,6 +202,7 @@
 				D01D2F741F94666A0000826A /* ViewControllers */,
 				D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */,
 				D09FBBA71F833732008490DE /* Storyboards */,
+				D01D2F7A1F9470F20000826A /* Nibs */,
 				D0724CC01F78E2C200D1AA2B /* Assets.xcassets */,
 				D01D2F691F9465A80000826A /* Resources */,
 				D0724CC51F78E2C200D1AA2B /* Info.plist */,
@@ -325,6 +333,7 @@
 				TargetAttributes = {
 					D0724CB51F78E2C200D1AA2B = {
 						CreatedOnToolsVersion = 8.3.3;
+						DevelopmentTeam = 2EX99YN5P9;
 						ProvisioningStyle = Automatic;
 					};
 					D0724CC91F78E2C200D1AA2B = {
@@ -702,6 +711,7 @@
 			baseConfigurationReference = 85F8D421FA9BF9F4FF980B60 /* Pods-POPExample.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2EX99YN5P9;
 				INFOPLIST_FILE = POPExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.POPExample;
@@ -715,6 +725,7 @@
 			baseConfigurationReference = 1E5870B21600F6EAC8FFD8C7 /* Pods-POPExample.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 2EX99YN5P9;
 				INFOPLIST_FILE = POPExample/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.POPExample;
