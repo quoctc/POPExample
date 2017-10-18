@@ -8,40 +8,84 @@
 
 import UIKit
 
-protocol ValidatableTextField: class { }
+protocol ValidatableView: class { }
 
-extension ValidatableTextField where Self:UITextField {
+extension ValidatableView where Self:UIView {
     func isValid() -> Bool { return false }
-}
-
-class RequiredTextField: UITextField, ValidatableTextField {
     
-}
-
-class EmailTextField: UITextField, ValidatableTextField {
-    func isValid() -> Bool {
-        let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
-        return NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self.text)
+    func notifyInvalid() {
+        //get the border and red it - remove/custome those code whenever you want
+        self.layer.borderWidth = 1
+        self.layer.cornerRadius = 5
+        self.layer.borderColor = UIColor.red.cgColor
+    }
+    
+    func reset() {
+        self.layer.borderColor = UIColor.lightGray.cgColor
     }
 }
 
-class SecureTextField: UITextField, ValidatableTextField {
-    var maxLength: Int = 0
-    var minLength: Int = 0
+class RequiredTextField: UITextField, ValidatableView {
+    func isValid() -> Bool {
+        self.reset()
+        if let text = self.text, text.isEmpty == false {
+            return true
+        }
+        self.notifyInvalid()
+        return false
+    }
+}
+
+class EmailTextField: RequiredTextField {
+    override func isValid() -> Bool {
+        if super.isValid() {
+            let emailRegex = "[A-Z0-9a-z._%+-]+@[A-Za-z0-9.-]+\\.[A-Za-z]{2,6}"
+            let isValid = NSPredicate(format: "SELF MATCHES %@", emailRegex).evaluate(with: self.text)
+            if isValid == false {
+                notifyInvalid()
+            }
+            return isValid
+        }
+        else {
+            return false
+        }
+    }
+}
+
+class SecureTextField: RequiredTextField {
+    var maxLength: Int = 100
+    var minLength: Int = 1
     var isAllowNull: Bool = false
     
-    func isValid() -> Bool {
-        if let textLength = self.text?.characters.count {
-            if textLength < minLength ||
-                textLength > maxLength {
-                return false
+    override func isValid() -> Bool {
+        if super.isValid() {
+            if let textLength = self.text?.characters.count {
+                if textLength < minLength ||
+                    textLength > maxLength {
+                    notifyInvalid()
+                    return false
+                }
+                else {
+                    /*
+                    let passwordRegex = "^(?=.*[0-9a-z])(?=.*[$@$#!%*?&])[A-Z0-9a-z\\d$@$#!%*?&]"
+                    let isValid = NSPredicate(format: "SELF MATCHES %@", passwordRegex).evaluate(with: self.text)
+                    if isValid == false {
+                        notifyInvalid()
+                    }
+                    return isValid
+                    */
+                    return true
+                }
             }
             else {
-                return true
+                if isAllowNull == false {
+                    notifyInvalid()
+                }
+                return isAllowNull
             }
         }
         else {
-            return isAllowNull
+            return false
         }
     }
 }

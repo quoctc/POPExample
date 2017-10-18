@@ -1,5 +1,5 @@
 //
-//  ReuseableTableViewCell.swift
+//  ReusableTableViewCell.swift
 //  POPExample
 //
 //  Created by Quoc Tran on 9/25/17.
@@ -13,18 +13,18 @@
 import UIKit
 
 //1. Reusable view protocol for the cells
-//Create ReuseableView protocal
-protocol ReuseableView: class {}
+//Create ReusableView protocal
+protocol ReusableView: class {}
 
-//ReuseableView just use for UIView
-extension ReuseableView where Self: UIView {
+//ReusableView just use for UIView
+extension ReusableView where Self: UIView {
     static var reuseIdentifier: String {
         return String(describing: self)
     }
 }
 
-//Make all UITableViewCell is ReuseableView
-extension UITableViewCell: ReuseableView { }
+//Make all UITableViewCell is ReusableView
+extension UITableViewCell: ReusableView { }
 
 //2. Nib load protocol for UIView
 //Create Nib load protocal
@@ -39,7 +39,7 @@ extension NibLoadableView where Self: UIView {
 
 //3.
 extension UITableView {
-    func register<T: UITableViewCell>(_: T.Type) where T: ReuseableView, T: NibLoadableView {
+    func register<T: UITableViewCell>(_: T.Type) where T: ReusableView, T: NibLoadableView {
         let Nib = UINib(nibName: T.nibName, bundle: nil)
         register(Nib, forCellReuseIdentifier: T.reuseIdentifier)
     }
@@ -47,7 +47,7 @@ extension UITableView {
 
 //4
 extension UITableView {
-    func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReuseableView {
+    func dequeueReusableCell<T: UITableViewCell>(forIndexPath indexPath: IndexPath) -> T where T: ReusableView {
         guard let cell = dequeueReusableCell(withIdentifier: T.reuseIdentifier, for: indexPath) as? T else {
             fatalError("Could not dequeue cell with identifier: \(T.reuseIdentifier)")
         }

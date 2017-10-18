@@ -17,6 +17,11 @@
 		D01D2F791F94668B0000826A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01D2F771F94668B0000826A /* Auth.storyboard */; };
 		D01D2F7C1F9482540000826A /* UITextFieldExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F7B1F9482540000826A /* UITextFieldExtentions.swift */; };
 		D01D2F7F1F9702910000826A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F7E1F9702910000826A /* ViewController.swift */; };
+		D055F06E1F974279008E11D3 /* ViewControllerExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F06D1F974279008E11D3 /* ViewControllerExtentions.swift */; };
+		D055F0701F974368008E11D3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F06F1F974368008E11D3 /* BaseViewController.swift */; };
+		D055F0721F97561B008E11D3 /* AuthManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F0711F97561B008E11D3 /* AuthManagerViewController.swift */; };
+		D055F0741F975AA4008E11D3 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F0731F975AA4008E11D3 /* UserProfileViewController.swift */; };
+		D055F0781F97687C008E11D3 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F0771F97687C008E11D3 /* StoryboardExtension.swift */; };
 		D0724CBA1F78E2C200D1AA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */; };
 		D0724CBF1F78E2C200D1AA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0724CBD1F78E2C200D1AA2B /* Main.storyboard */; };
 		D0724CC11F78E2C200D1AA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0724CC01F78E2C200D1AA2B /* Assets.xcassets */; };
@@ -62,6 +67,11 @@
 		D01D2F781F94668B0000826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
 		D01D2F7B1F9482540000826A /* UITextFieldExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtentions.swift; sourceTree = "<group>"; };
 		D01D2F7E1F9702910000826A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		D055F06D1F974279008E11D3 /* ViewControllerExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerExtentions.swift; sourceTree = "<group>"; };
+		D055F06F1F974368008E11D3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		D055F0711F97561B008E11D3 /* AuthManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManagerViewController.swift; sourceTree = "<group>"; };
+		D055F0731F975AA4008E11D3 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		D055F0771F97687C008E11D3 /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
 		D0724CB61F78E2C200D1AA2B /* POPExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POPExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0724CBE1F78E2C200D1AA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -209,6 +219,7 @@
 				D0724CC01F78E2C200D1AA2B /* Assets.xcassets */,
 				D01D2F691F9465A80000826A /* Resources */,
 				D0724CC51F78E2C200D1AA2B /* Info.plist */,
+				D055F06F1F974368008E11D3 /* BaseViewController.swift */,
 			);
 			path = POPExample;
 			sourceTree = "<group>";
@@ -234,6 +245,8 @@
 		D0724CEA1F78E5DB00D1AA2B /* Extentions */ = {
 			isa = PBXGroup;
 			children = (
+				D055F06D1F974279008E11D3 /* ViewControllerExtentions.swift */,
+				D055F0771F97687C008E11D3 /* StoryboardExtension.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -242,9 +255,11 @@
 			isa = PBXGroup;
 			children = (
 				D09FBBA31F832FDC008490DE /* AuthViewController.swift */,
+				D055F0711F97561B008E11D3 /* AuthManagerViewController.swift */,
 				D09FBB9F1F832B30008490DE /* LoginViewController.swift */,
 				D09FBBA11F832FC7008490DE /* ForgotPasswordViewController.swift */,
 				D09FBBA51F833051008490DE /* SignUpViewController.swift */,
+				D055F0731F975AA4008E11D3 /* UserProfileViewController.swift */,
 			);
 			path = Auth;
 			sourceTree = "<group>";
@@ -547,11 +562,16 @@
 				D01D2F6F1F9466170000826A /* BookTableViewCell.swift in Sources */,
 				D01D2F7C1F9482540000826A /* UITextFieldExtentions.swift in Sources */,
 				D01D2F731F9466450000826A /* Movie.swift in Sources */,
+				D055F06E1F974279008E11D3 /* ViewControllerExtentions.swift in Sources */,
+				D055F0701F974368008E11D3 /* BaseViewController.swift in Sources */,
 				D01D2F7F1F9702910000826A /* ViewController.swift in Sources */,
 				D09FBBA01F832B30008490DE /* LoginViewController.swift in Sources */,
 				D09FBBA21F832FC7008490DE /* ForgotPasswordViewController.swift in Sources */,
+				D055F0741F975AA4008E11D3 /* UserProfileViewController.swift in Sources */,
+				D055F0721F97561B008E11D3 /* AuthManagerViewController.swift in Sources */,
 				D09FBBA41F832FDC008490DE /* AuthViewController.swift in Sources */,
 				D0724CBA1F78E2C200D1AA2B /* AppDelegate.swift in Sources */,
+				D055F0781F97687C008E11D3 /* StoryboardExtension.swift in Sources */,
 				D09FBBA61F833051008490DE /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -661,6 +681,7 @@
 				ONLY_ACTIVE_ARCH = YES;
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -704,6 +725,7 @@
 				IPHONEOS_DEPLOYMENT_TARGET = 10.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				SDKROOT = iphoneos;
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
@@ -720,6 +742,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.POPExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Debug;
@@ -734,6 +757,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.home.POPExample;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 3.0;
 			};
 			name = Release;

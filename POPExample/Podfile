@@ -7,6 +7,9 @@ target 'POPExample' do
 
   # Pods for POPExample
   pod 'Firebase/Core'
+  pod 'Firebase/Auth'
+  pod 'MBProgressHUD', '~> 1.0.0'
+  pod 'TPKeyboardAvoiding'
 
   target 'POPExampleTests' do
     inherit! :search_paths
