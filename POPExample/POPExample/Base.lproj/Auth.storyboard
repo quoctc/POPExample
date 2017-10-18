@@ -39,14 +39,15 @@
                                 <rect key="frame" x="16" y="359.5" width="343" height="36"/>
                                 <state key="normal" title="Login"/>
                                 <connections>
+                                    <action selector="touchedLoginBtn:" destination="X0g-q4-0Ct" eventType="touchUpInside" id="zlK-BD-1ga"/>
                                     <segue destination="SRM-ek-h14" kind="show" id="QqN-qP-kTv"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZ4-j8-FeG">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="aZ4-j8-FeG" customClass="SecureTextField" customModule="POPExample" customModuleProvider="target">
                                 <rect key="frame" x="16" y="315.5" width="343" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Yqv-DB-t0P">
                                 <rect key="frame" x="16" y="570" width="343" height="36.5"/>
@@ -55,11 +56,11 @@
                                     <segue destination="hjW-ah-pEE" kind="show" id="vzc-9k-Idw"/>
                                 </connections>
                             </button>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4F4-nk-GrJ">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="4F4-nk-GrJ" customClass="EmailTextField" customModule="POPExample" customModuleProvider="target">
                                 <rect key="frame" x="16" y="271.5" width="343" height="36"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
+                                <textInputTraits key="textInputTraits" keyboardType="emailAddress"/>
                             </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
@@ -86,6 +87,12 @@
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="cf9-iE-wNU"/>
+                    <connections>
+                        <outlet property="passwordTextField" destination="aZ4-j8-FeG" id="KEC-9S-dn3"/>
+                        <outlet property="userNameTextField" destination="4F4-nk-GrJ" id="yYh-uV-IgH"/>
+                        <outletCollection property="requiredUIItems" destination="4F4-nk-GrJ" collectionClass="NSMutableArray" id="ZyM-9M-Lgm"/>
+                        <outletCollection property="requiredUIItems" destination="aZ4-j8-FeG" collectionClass="NSMutableArray" id="i3f-Q9-zrP"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="4sq-pp-HG6" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -255,7 +262,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="PyG-rc-nGa"/>
-        <segue reference="Cuo-zR-R4d"/>
+        <segue reference="Tb5-JF-tcm"/>
+        <segue reference="QqN-qP-kTv"/>
     </inferredMetricsTieBreakers>
 </document>

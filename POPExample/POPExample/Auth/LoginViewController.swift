@@ -10,16 +10,37 @@ import UIKit
 
 class LoginViewController: AuthViewController {
 
+    @IBOutlet weak var userNameTextField: EmailTextField!
+    @IBOutlet weak var passwordTextField: SecureTextField!
+    @IBOutlet var requiredUIItems: [RequiredTextField]!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
-        // Do any additional setup after loading the view.
     }
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
+    
+    // MARK: - 
+    func collectDataFromUIs() {
+        
+    }
+    
+    func isValidDataFromUIs() -> Bool {
+        var isValid = true
+        for item in requiredUIItems {
+            isValid = isValid && item.isValid()
+        }
+        
+        return isValid
+    }
+    
+    // MARK: - UI Actions
+    @IBAction func touchedLoginBtn(_ sender: Any) {
+        self.isValidDataFromUIs()
+    }
+    
     
     // MARK: - Navigation
     

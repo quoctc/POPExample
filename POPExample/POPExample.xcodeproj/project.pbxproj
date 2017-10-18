@@ -14,8 +14,9 @@
 		D01D2F6F1F9466170000826A /* BookTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F6D1F9466170000826A /* BookTableViewCell.swift */; };
 		D01D2F701F9466170000826A /* UIViewConfigs.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F6E1F9466170000826A /* UIViewConfigs.swift */; };
 		D01D2F731F9466450000826A /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F721F9466450000826A /* Movie.swift */; };
-		D01D2F761F94666A0000826A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F751F94666A0000826A /* ViewController.swift */; };
 		D01D2F791F94668B0000826A /* Auth.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D01D2F771F94668B0000826A /* Auth.storyboard */; };
+		D01D2F7C1F9482540000826A /* UITextFieldExtentions.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F7B1F9482540000826A /* UITextFieldExtentions.swift */; };
+		D01D2F7F1F9702910000826A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D01D2F7E1F9702910000826A /* ViewController.swift */; };
 		D0724CBA1F78E2C200D1AA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */; };
 		D0724CBF1F78E2C200D1AA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0724CBD1F78E2C200D1AA2B /* Main.storyboard */; };
 		D0724CC11F78E2C200D1AA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0724CC01F78E2C200D1AA2B /* Assets.xcassets */; };
@@ -58,8 +59,9 @@
 		D01D2F6D1F9466170000826A /* BookTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BookTableViewCell.swift; sourceTree = "<group>"; };
 		D01D2F6E1F9466170000826A /* UIViewConfigs.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewConfigs.swift; sourceTree = "<group>"; };
 		D01D2F721F9466450000826A /* Movie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
-		D01D2F751F94666A0000826A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D01D2F781F94668B0000826A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Auth.storyboard; sourceTree = "<group>"; };
+		D01D2F7B1F9482540000826A /* UITextFieldExtentions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UITextFieldExtentions.swift; sourceTree = "<group>"; };
+		D01D2F7E1F9702910000826A /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		D0724CB61F78E2C200D1AA2B /* POPExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POPExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0724CBE1F78E2C200D1AA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -143,6 +145,7 @@
 			children = (
 				D01D2F6D1F9466170000826A /* BookTableViewCell.swift */,
 				D01D2F6E1F9466170000826A /* UIViewConfigs.swift */,
+				D01D2F7B1F9482540000826A /* UITextFieldExtentions.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -155,19 +158,19 @@
 			path = Models;
 			sourceTree = "<group>";
 		};
-		D01D2F741F94666A0000826A /* ViewControllers */ = {
-			isa = PBXGroup;
-			children = (
-				D01D2F751F94666A0000826A /* ViewController.swift */,
-			);
-			path = ViewControllers;
-			sourceTree = "<group>";
-		};
 		D01D2F7A1F9470F20000826A /* Nibs */ = {
 			isa = PBXGroup;
 			children = (
 			);
 			path = Nibs;
+			sourceTree = "<group>";
+		};
+		D01D2F7D1F9702910000826A /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				D01D2F7E1F9702910000826A /* ViewController.swift */,
+			);
+			path = Main;
 			sourceTree = "<group>";
 		};
 		D0724CAD1F78E2C200D1AA2B = {
@@ -195,11 +198,11 @@
 		D0724CB81F78E2C200D1AA2B /* POPExample */ = {
 			isa = PBXGroup;
 			children = (
-				D0724CEA1F78E5DB00D1AA2B /* Extentions */,
-				D09FBB9E1F832B0A008490DE /* Auth */,
 				D01D2F711F9466450000826A /* Models */,
+				D0724CEA1F78E5DB00D1AA2B /* Extentions */,
 				D01D2F6C1F9466170000826A /* Views */,
-				D01D2F741F94666A0000826A /* ViewControllers */,
+				D09FBB9E1F832B0A008490DE /* Auth */,
+				D01D2F7D1F9702910000826A /* Main */,
 				D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */,
 				D09FBBA71F833732008490DE /* Storyboards */,
 				D01D2F7A1F9470F20000826A /* Nibs */,
@@ -542,8 +545,9 @@
 			files = (
 				D01D2F701F9466170000826A /* UIViewConfigs.swift in Sources */,
 				D01D2F6F1F9466170000826A /* BookTableViewCell.swift in Sources */,
+				D01D2F7C1F9482540000826A /* UITextFieldExtentions.swift in Sources */,
 				D01D2F731F9466450000826A /* Movie.swift in Sources */,
-				D01D2F761F94666A0000826A /* ViewController.swift in Sources */,
+				D01D2F7F1F9702910000826A /* ViewController.swift in Sources */,
 				D09FBBA01F832B30008490DE /* LoginViewController.swift in Sources */,
 				D09FBBA21F832FC7008490DE /* ForgotPasswordViewController.swift in Sources */,
 				D09FBBA41F832FDC008490DE /* AuthViewController.swift in Sources */,
