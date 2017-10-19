@@ -24,6 +24,11 @@ extension UIStoryboard {
     }
     
     func initialViewController() -> UIViewController {
-        return self.instantiateViewController(withIdentifier: ViewControllerStoryboardIds.AuthNavigationController.rawValue)
+        if let initialViewController = self.instantiateInitialViewController() {
+            return initialViewController
+        }
+        else {
+            return UIViewController()
+        }
     }
 }
