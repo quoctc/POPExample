@@ -63,7 +63,7 @@ class LoginViewController: AuthViewController, UITextFieldDelegate {
                     self?.present(alert, animated: true, completion: nil)
                 }
                 else {
-                    self?.performSegue(withIdentifier: "SegueLoginToMain", sender: sender)
+                    self?.perform(segue: .SegueLoginToMain, sender: sender)
                 }
             })
         }
@@ -87,9 +87,12 @@ class LoginViewController: AuthViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "SegueLoginToMain" {
-            let main = segue.destination
-            main.navigationItem.hidesBackButton = true
+        switch segueIdentifier(for: segue) {
+            case .SegueLoginToMain:
+                let main = segue.destination
+                main.navigationItem.hidesBackButton = true
+            default: break
+            
         }
     }
 }

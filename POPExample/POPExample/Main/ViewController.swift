@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ViewController: UIViewController, UITableViewDataSource {
+class ViewController: MainViewController, UITableViewDataSource, UITableViewDelegate {
 
     @IBOutlet weak var booksTableView: UITableView!
     
@@ -38,6 +38,10 @@ extension ViewController {
         cell.authorLabel.text = "abc"
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.perform(segue: .SegueBooksToDetail, sender: tableView)
     }
 }
 

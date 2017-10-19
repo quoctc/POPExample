@@ -21,7 +21,9 @@
 		D055F0701F974368008E11D3 /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F06F1F974368008E11D3 /* BaseViewController.swift */; };
 		D055F0721F97561B008E11D3 /* AuthManagerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F0711F97561B008E11D3 /* AuthManagerViewController.swift */; };
 		D055F0741F975AA4008E11D3 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F0731F975AA4008E11D3 /* UserProfileViewController.swift */; };
-		D055F0781F97687C008E11D3 /* StoryboardExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F0771F97687C008E11D3 /* StoryboardExtension.swift */; };
+		D055F07A1F985C02008E11D3 /* SegueHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F0791F985C02008E11D3 /* SegueHandler.swift */; };
+		D055F07C1F985D0A008E11D3 /* StoryboardHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F07B1F985D0A008E11D3 /* StoryboardHandler.swift */; };
+		D055F07E1F9862E1008E11D3 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = D055F07D1F9862E1008E11D3 /* MainViewController.swift */; };
 		D0724CBA1F78E2C200D1AA2B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */; };
 		D0724CBF1F78E2C200D1AA2B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D0724CBD1F78E2C200D1AA2B /* Main.storyboard */; };
 		D0724CC11F78E2C200D1AA2B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = D0724CC01F78E2C200D1AA2B /* Assets.xcassets */; };
@@ -71,7 +73,9 @@
 		D055F06F1F974368008E11D3 /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
 		D055F0711F97561B008E11D3 /* AuthManagerViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AuthManagerViewController.swift; sourceTree = "<group>"; };
 		D055F0731F975AA4008E11D3 /* UserProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
-		D055F0771F97687C008E11D3 /* StoryboardExtension.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardExtension.swift; sourceTree = "<group>"; };
+		D055F0791F985C02008E11D3 /* SegueHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SegueHandler.swift; sourceTree = "<group>"; };
+		D055F07B1F985D0A008E11D3 /* StoryboardHandler.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoryboardHandler.swift; sourceTree = "<group>"; };
+		D055F07D1F9862E1008E11D3 /* MainViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		D0724CB61F78E2C200D1AA2B /* POPExample.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = POPExample.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		D0724CB91F78E2C200D1AA2B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		D0724CBE1F78E2C200D1AA2B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -178,6 +182,7 @@
 		D01D2F7D1F9702910000826A /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				D055F07D1F9862E1008E11D3 /* MainViewController.swift */,
 				D01D2F7E1F9702910000826A /* ViewController.swift */,
 			);
 			path = Main;
@@ -246,7 +251,8 @@
 			isa = PBXGroup;
 			children = (
 				D055F06D1F974279008E11D3 /* ViewControllerExtentions.swift */,
-				D055F0771F97687C008E11D3 /* StoryboardExtension.swift */,
+				D055F07B1F985D0A008E11D3 /* StoryboardHandler.swift */,
+				D055F0791F985C02008E11D3 /* SegueHandler.swift */,
 			);
 			name = Extentions;
 			sourceTree = "<group>";
@@ -565,13 +571,15 @@
 				D055F06E1F974279008E11D3 /* ViewControllerExtentions.swift in Sources */,
 				D055F0701F974368008E11D3 /* BaseViewController.swift in Sources */,
 				D01D2F7F1F9702910000826A /* ViewController.swift in Sources */,
+				D055F07E1F9862E1008E11D3 /* MainViewController.swift in Sources */,
 				D09FBBA01F832B30008490DE /* LoginViewController.swift in Sources */,
 				D09FBBA21F832FC7008490DE /* ForgotPasswordViewController.swift in Sources */,
 				D055F0741F975AA4008E11D3 /* UserProfileViewController.swift in Sources */,
+				D055F07A1F985C02008E11D3 /* SegueHandler.swift in Sources */,
 				D055F0721F97561B008E11D3 /* AuthManagerViewController.swift in Sources */,
 				D09FBBA41F832FDC008490DE /* AuthViewController.swift in Sources */,
 				D0724CBA1F78E2C200D1AA2B /* AppDelegate.swift in Sources */,
-				D055F0781F97687C008E11D3 /* StoryboardExtension.swift in Sources */,
+				D055F07C1F985D0A008E11D3 /* StoryboardHandler.swift in Sources */,
 				D09FBBA61F833051008490DE /* SignUpViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

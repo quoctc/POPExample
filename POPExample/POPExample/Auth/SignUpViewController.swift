@@ -43,14 +43,14 @@ class SignUpViewController: AuthViewController, UITextFieldDelegate {
             Auth.auth().createUser(withEmail: userNameTextField.text!, password: passwordTextField.text!, completion: { [weak self] (user, error) in
                 loadingHud.hide(animated: false)
                 if error != nil {
-                    let alert = UIAlertController(title: "Error!", message: error?.localizedDescription, preferredStyle: .alert)
+                    let alert = UIAlertController(title: "Error", message: error?.localizedDescription, preferredStyle: .alert)
                     alert.addAction(UIAlertAction(title: "OK", style: .default, handler: { (action) in
                         alert.dismiss(animated: true, completion: nil)
                     }))
                     self?.present(alert, animated: true, completion: nil)
                 }
                 else {
-                    self?.performSegue(withIdentifier: "SegueSignUpToMain", sender: sender)
+                    self?.perform(segue: .SegueSignUpToMain, sender: sender)
                 }
             })
         }
@@ -74,9 +74,12 @@ class SignUpViewController: AuthViewController, UITextFieldDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         // Get the new view controller using segue.destinationViewController.
         // Pass the selected object to the new view controller.
-        if segue.identifier == "SegueSignUpToMain" {
+        switch segueIdentifier(for: segue) {
+        case .SegueSignUpToMain:
             let main = segue.destination
             main.navigationItem.hidesBackButton = true
+        default:
+            break
         }
     }
 

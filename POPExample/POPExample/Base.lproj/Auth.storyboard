@@ -290,7 +290,7 @@
         <!--Navigation Controller-->
         <scene sceneID="Exg-N3-UqS">
             <objects>
-                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kJo-hW-AfQ" sceneMemberID="viewController">
+                <navigationController storyboardIdentifier="AuthNavigationController" automaticallyAdjustsScrollViewInsets="NO" id="kJo-hW-AfQ" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="q0l-JB-Aaa">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -307,7 +307,7 @@
         </scene>
     </scenes>
     <inferredMetricsTieBreakers>
-        <segue reference="z7G-Pc-Hdk"/>
+        <segue reference="YVm-u0-rjw"/>
         <segue reference="PyG-rc-nGa"/>
     </inferredMetricsTieBreakers>
 </document>

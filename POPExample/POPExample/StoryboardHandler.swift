@@ -8,19 +8,22 @@
 
 import UIKit
 
+enum ViewControllerStoryboardIds: String {
+    case AuthNavigationController
+}
+
 extension UIStoryboard {
-    class func authStoryboard() -> UIStoryboard {
+    class func auth() -> UIStoryboard {
         let authStoryboard = UIStoryboard(name: "Auth", bundle: nil)
         return authStoryboard
     }
     
-    func authManagerViewController() -> UIViewController {
-        return self.instantiateViewController(withIdentifier: "AuthManagerViewController")
-    }
-    
-    //
-    class func mainStoryboard() -> UIStoryboard {
+    class func main() -> UIStoryboard {
         let mainStoryboard = UIStoryboard(name: "Main", bundle: nil)
         return mainStoryboard
+    }
+    
+    func initialViewController() -> UIViewController {
+        return self.instantiateViewController(withIdentifier: ViewControllerStoryboardIds.AuthNavigationController.rawValue)
     }
 }

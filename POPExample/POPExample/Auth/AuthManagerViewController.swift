@@ -38,10 +38,10 @@ class AuthManagerViewController: AuthViewController {
         DispatchQueue.main.async {
             MBProgressHUD.hide(for: self.view, animated: false)
             if Auth.auth().currentUser != nil {
-                self.performSegue(withIdentifier: "SegueAuthManagerToMain", sender: self)
+                self.perform(segue: .SegueAuthManagerToMain, sender: self)
             }
             else {
-                self.performSegue(withIdentifier: "SegueAuthManagerToLogin", sender: self)
+                self.perform(segue: .SegueAuthManagerToLogin, sender: self)
             }
         }
     }
