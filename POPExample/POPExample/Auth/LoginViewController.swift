@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import MBProgressHUD
 
-class LoginViewController: AuthViewController {
+class LoginViewController: AuthViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: EmailTextField!
     @IBOutlet weak var passwordTextField: SecureTextField!
@@ -50,6 +50,7 @@ class LoginViewController: AuthViewController {
     
     // MARK: - UI Actions
     @IBAction func touchedLoginBtn(_ sender: Any) {
+        self.view.endEditing(true)
         if self.isValidDataFromUIs() == true {
             let loadingHud = MBProgressHUD.showAdded(to: self.view, animated: false)
             Auth.auth().signIn(withEmail: userNameTextField.text!, password: passwordTextField.text!, completion: {[weak self] (user, error) in
@@ -68,6 +69,12 @@ class LoginViewController: AuthViewController {
         }
     }
     
+    // MARK: - Textfield Delegates
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.touchedLoginBtn(textField)
+        
+        return true
+    }
     
     // MARK: - Navigation
     

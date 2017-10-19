@@ -10,7 +10,7 @@ import UIKit
 import FirebaseAuth
 import MBProgressHUD
 
-class SignUpViewController: AuthViewController {
+class SignUpViewController: AuthViewController, UITextFieldDelegate {
 
     @IBOutlet weak var userNameTextField: EmailTextField!
     @IBOutlet weak var passwordTextField: SecureTextField!
@@ -54,6 +54,13 @@ class SignUpViewController: AuthViewController {
                 }
             })
         }
+    }
+    
+    // MARK: - Textfield Delegates
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        self.touchedSignUpBtn(textField)
+        
+        return true
     }
     
     // MARK: - Navigation
